@@ -8,8 +8,11 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-japan-background: #F4E3B8;
+  --color-japan-foreground: #1D2452;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-judson: var(--font-judson);
 }
 
 @media (prefers-color-scheme: dark) {
