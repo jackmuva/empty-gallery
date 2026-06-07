@@ -10,13 +10,13 @@ export default function Home() {
   const container = useRef<HTMLDivElement | null>(null);
 
   useGSAP(() => {
-    gsap.to('.print', { rotate: 0, duration: 0.5, delay: 10 });
-    gsap.to('.inkdrop', { opacity: 1, duration: 2, stagger: 2 });
+    gsap.to('.print', { rotate: 0, duration: 1, delay: 10, ease: "elastic.out" });
+    gsap.to('.inkdrop', { opacity: 0.6, duration: 2, stagger: 2, ease: "expo.in" });
   }, { scope: container });
 
   return (
     <div ref={container} className="relative bg-japan-background font-judson flex flex-col flex-1 items-center justify-center text-japan-foreground">
-      <div className="flex flex-col sm:flex-row gap-10 items-center bg-japan-background rounded-md p-4 z-10">
+      <div className="flex flex-col sm:flex-row gap-10 items-center bg-japan-background rounded-md p-4">
         <div className="bg-clip-text text-transparent bg-linear-to-b 
       from-japan-foreground from-80% to-japan-background">
           <span className="text-5xl font-bold">
